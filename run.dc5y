@@ -1,0 +1,10 @@
+FROM florentbenoit/docker-static-serve-grunt
+
+
+ADD $app$/todo.css /tmp/tutorial/todo.css
+ADD $app$/todo.js /tmp/tutorial/todo.js
+ADD $app$/index.html /tmp/tutorial/index.html
+
+# Start
+CMD cp -a /tmp/tutorial/. /home/user/application/ && grunt serve
+
